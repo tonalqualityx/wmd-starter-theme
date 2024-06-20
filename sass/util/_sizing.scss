@@ -1,0 +1,53 @@
+html {
+    max-width: 100%;
+}
+
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 1040px;
+    max-width: 100%;
+    margin: auto;
+}
+
+.full-width, .col {
+    width: 100%;
+}
+
+@media screen and (min-width: 768px){
+
+    .col-62 {
+        width: 62%;
+    }
+
+    .col-50 {
+        width: 50%;
+    }
+    
+    .col-38 {
+        width: 38%;
+    }
+
+    .gap-1 .col-50 {
+        width: calc( 50% - 0.5em );
+    }
+
+    .gap-1 .col-62 {
+        width: calc( 62% - 0.6rem );
+    }
+
+    .gap-1 .col-38 {
+        width: calc( 38% - 0.6rem );
+    }
+
+}
+
+@media screen and (min-width: calc( 1040px + var(--nav_width) ) ) {
+    .container {
+        margin-left: calc((100vw - (1040px + var(--nav_width, 250px))) / 2 + var(--nav_width, 250px));
+        margin-right: auto;
+    }
+}
